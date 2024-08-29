@@ -1,0 +1,25 @@
+name: Notify on Issue Creation
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  send_email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Email via Gmail
+        uses: DanielRuf/send-mail@v1
+        with:
+          smtp-server: smtp.gmail.com
+          smtp-port: 465
+          smtp-secure: true
+          from-email: 'omkarajgaonkar1@gmail.com'    # Replace with your Gmail address
+          to-email: 'omkarwork08@gmail.com'      # Replace with the recipient's Gmail address
+          username: 'omkarajgaonkar1@gmail.com'       # Replace with your Gmail address
+          password: ${{ secrets.GMAIL_PASSWORD }} # Your Gmail app password stored in secrets
+          subject: 'New Issue Created'
+          body: |
+            A new issue has been created in the repository.
+            Issue Title: ${{ github.event.issue.title }}
+            Issue URL: ${{ github.event.issue.html_url }}
