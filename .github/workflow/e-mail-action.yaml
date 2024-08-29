@@ -12,7 +12,7 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 587
-          username: ${{ secrets.email- }}
+          username: ${{ secrets.EMAIL_ADDRESS }}
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "New Issue Created: ${{ github.event.issue.title }}"
           body: >-
@@ -27,5 +27,5 @@ jobs:
             Description:
 
             ${{ github.event.issue.body }}
-          to: ${{ secrets.EMAIL_ADDRESS }}
+          to: arnavamol77@gmail.com
           from: ${{ secrets.EMAIL_ADDRESS }}
