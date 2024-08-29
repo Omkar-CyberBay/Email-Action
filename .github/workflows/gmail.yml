@@ -14,10 +14,10 @@ jobs:
           smtp-server: smtp.gmail.com
           smtp-port: 587
           smtp-secure: true
-          from-email: 'omkarajgaonkar1@gmail.com'    # Replace with your Gmail address
-          to-email: 'omkarwork08@gmail.com'      # Replace with the recipient's Gmail address
-          username: 'omkarajgaonkar1@gmail.com'       # Replace with your Gmail address
-          password: ${{ secrets.GMAIL_PASSWORD }} # Your Gmail app password stored in secrets
+          from-email: omkarajgaonkar1@gmail.com
+          to-email: omkarwork08@gmail.com     
+          username: omkarajgaonkar1@gmail.com    
+          password: ${{ secrets.GMAIL_PASSWORD }} 
           subject: 'New Issue Created'
           body: |
             A new issue has been created in the repository.
