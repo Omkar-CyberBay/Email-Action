@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send Email via Gmail
-        uses: DanielRuf/send-mail@v1
+        uses: dawidd6/action-send-mail@v1.3.0
         with:
           smtp-server: smtp.gmail.com
           smtp-port: 465
