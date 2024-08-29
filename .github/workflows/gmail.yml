@@ -12,7 +12,7 @@ jobs:
         uses: dawidd6/action-send-mail@v1.3.0
         with:
           smtp-server: smtp.gmail.com
-          smtp-port: 465
+          smtp-port: 587
           smtp-secure: true
           from-email: 'omkarajgaonkar1@gmail.com'    # Replace with your Gmail address
           to-email: 'omkarwork08@gmail.com'      # Replace with the recipient's Gmail address
