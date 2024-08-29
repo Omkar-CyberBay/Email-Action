@@ -11,11 +11,11 @@ jobs:
       - name: Send Email via Gmail
         uses: dawidd6/action-send-mail@v1.3.0
         with:
-          smtp-address: smtp.gmail.com       
-          smtp-port: 587         
-          smtp-secure: true
-          from-email: ${{ secrets.FROM_EMAIL }}         
-          to-email: ${{ secrets.TO_EMAIL }}             
+          server_address: smtp.gmail.com       
+          server_port: 587         
+          secure: true
+          from: ${{ secrets.FROM_EMAIL }}         
+          to: ${{ secrets.TO_EMAIL }}             
           username: ${{ secrets.USERNAME }}             
           password: ${{ secrets.GMAIL_PASSWORD }}      
           subject: 'New Issue Created'
