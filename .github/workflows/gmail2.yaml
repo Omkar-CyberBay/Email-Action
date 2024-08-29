@@ -1,0 +1,25 @@
+name: Notify on Issue Creation
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  send_email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Email via Gmail
+        uses: dawidd6/action-send-mail@v1.3.0
+        with:
+          smtp-address: smtp.gmail.com       
+          smtp-port: 587         
+          smtp-secure: true
+          from-email: ${{ secrets.FROM_EMAIL }}         
+          to-email: ${{ secrets.TO_EMAIL }}             
+          username: ${{ secrets.USERNAME }}             
+          password: ${{ secrets.GMAIL_PASSWORD }}      
+          subject: 'New Issue Created'
+          body: |
+            A new issue has been created in the repository.
+            Issue Title: ${{ github.event.issue.title }}
+            Issue URL: ${{ github.event.issue.html_url }}
