@@ -14,9 +14,9 @@ jobs:
           smtp-server: smtp.gmail.com
           smtp-port: 587
           smtp-secure: true
-          from-email: omkarajgaonkar1@gmail.com
-          to-email: omkarwork08@gmail.com     
-          username: omkarajgaonkar1@gmail.com    
+          from-email: 'omkarajgaonkar1@gmail.com'
+          to-email: 'omkarwork08@gmail.com'    
+          username: 'omkarajgaonkar1@gmail.com'  
           password: ${{ secrets.GMAIL_PASSWORD }} 
           subject: 'New Issue Created'
           body: |
